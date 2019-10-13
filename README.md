@@ -7,11 +7,13 @@ This is my code quiz, created using HTML, CSS, Javascript, and Bootstrap.
 
 ## Process
 
-I started out by writing the HTML and adding CSS styling to it, then commenting out the HTML, and adding elements via Javascript, while following along with my commented-out HTML.
+I started out by writing the HTML and adding CSS styling to it, then commenting out the HTML, and adding elements via Javascript, while following along with my commented-out HTML. Then I went under a long-winded process of trying to figure out how to load each page individually in a for loop. I would change the text content for each individual element. That wasn't working so I decided to forgo the dryness of it and just write out everything individually. Local storage was also not working.
+
+Then after getting some help, I decided to put them in pages and instead change the opacity of the different pages as they cycle through. This cleaned up my code a lot, and I was also able to easily write things into the local storage.
 
 ## Credits
 
-I used www.w3schools.com for help with Math.random(), addEventListener(), and array methods. I also used https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates'_original_method for figuring out how to shuffle my array in the final moments of the application.
+Lilo, Peter, Omar, and no sleep.
 
 ## License
 
