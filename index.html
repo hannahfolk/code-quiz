@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a id="highscores" href="#">View Highscores</a>
+        <div id="time">Time: <span id="time-left">0</span></div>
+    </div>
+    <div class="container">
+        <!--PAGE 1-->
+        <div class="page">
+            <h2 id="start-page-header">FRIENDS Quiz Challenge</h2>
+            <div>
+                <p id="instructions">
+                    Try to answer the following FRIENDS questions within the time limit.
+                    Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <button type="submit" id="start-quiz">Start Quiz</button>
+                </div>
+            </div>
+
+            <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/YnBntKOgnUSBkV7bQH" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Friends-season-5-episode-111-the-one-where-everybody-finds-out-YnBntKOgnUSBkV7bQH"></a></p>
+        </div>
+
+        <!--PAGE 2-->
+        <div class="page">
+            <h2 class="question-header">Which of the following is NOT one of the six FRIENDS?</h2>
+            <div>
+                <button class="choice">Joey</button>
+                <br>
+                <button class="choice">Monica</button>
+                <br>
+                <button class="choice">Ellen</button>
+                <br>
+                <button class="choice">Phoebe</button>
+            </div>
+        </div>
+        
+        <!--PAGE 3-->
+        <div class="page">
+            <h2 class="question-header">How many seasons of FRIENDS are there?</h2>
+            <div>
+                <button class="choice">12</button>
+                <br>
+                <button class="choice">10</button>
+                <br>
+                <button class="choice">9</button>
+                <br>
+                <button class="choice">11</button>
+            </div>
+        </div>
+        
+
+        <!--PAGE 4-->
+        <div class="page">
+            <h2 class="question-header">What is the name of the Central Perk barista who has a crush on Rachel?</h2>
+            <div>
+                <button class="choice">James</button>
+                <br>
+                <button class="choice">Arnold</button>
+                <br>
+                <button class="choice">Donald</button>
+                <br>
+                <button class="choice">Gunther</button>
+            </div>
+        </div>
+        
+
+        <!--PAGE 5-->
+        <div class="page">
+            <h2 class="question-header">What is the name that appears on the address label of Chandler's TV guide?</h2>
+            <div>
+                <button class="choice">Ms. Chanandler Bong</button>
+                <br>
+                <button class="choice">Chanandler Bong</button>
+                <br>
+                <button class="choice">Chandler Bing</button>
+                <br>
+                <button class="choice">Chandler Bong</button>
+            </div>
+        </div>
+        
+
+        <!--PAGE 6-->
+        <div class="page">
+            <h2 class="question-header">In what season is "The One With the Prom Video", where Rachel and Ross finally get together?</h2>
+            <div>
+                <button class="choice">3</button>
+                <br>
+                <button class="choice">6</button>
+                <br>
+                <button class="choice">2</button>
+                <br>
+                <button class="choice">10</button>
+            </div>
+        </div>
+        
+
+        <!--PAGE 7-->
+        <div class="page">
+            <h2 id="done-header">All done!</h2>
+            <div>
+                Your final score is <span id="score"></span>.
+                <form>
+                    <label for="intials">Enter initials:</label>
+                    <input type="text" id="initials">
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+                <p class="off" id="error">Please enter your initials.</p>
+            </div>
+        </div>
+        
+
+        <!--PAGE 8-->
+        <div class="page">
+            <h2 id="highscores-header">Highscores</h2>
+            <div>
+                <ul>
+                </ul>
+                <button type="submit" id="back-btn">Go back</button>
+                <button type="submit" id="clear-btn">Clear highscores</button>
+            </div>
+            <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/Rhf0uSWt1P2TFqVMZK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Friends-friends-season-9-tv-Rhf0uSWt1P2TFqVMZK"></a></p>
+        </div>
+        
+
+        <!--If user runs out of time-->
+        <div class="off" id="out-of-time-page">
+            <h2 id="out-of-time-header">Sorry, you have run out of time. Would you like to try again?</h2>
+            <div class="row">
+                <div class="col text-center">
+                    <button id="yes">Yes</button>
+                    <button id="no">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!--If user doesn't want to continue after running out of time-->
+        <div class="off" id="bye-bye">
+            <h2 id="sorry-bye">Sorry to see you go. Have a good day!</h2>
+            <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/Kc7qzYMnOTcDb0aEw5" id="sorry" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Friends-episode-2-season-9-friends-tv-Kc7qzYMnOTcDb0aEw5"></a></p>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
